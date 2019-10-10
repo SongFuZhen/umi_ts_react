@@ -1,0 +1,9 @@
+.header {
+  background: #fff;
+}
+
+.content {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+  height: calc(100vh - 64px);
+}
