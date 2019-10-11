@@ -17,13 +17,10 @@ export interface GlobalModelType {
 
 const GlobalModel: GlobalModelType = {
   namespace: 'global',
-
   state: {
     collapsed: false,
   },
-
   effects: {},
-
   reducers: {
     changeLayoutCollapsed(state = { collapsed: true }, { payload }): GlobalModelState {
       return {

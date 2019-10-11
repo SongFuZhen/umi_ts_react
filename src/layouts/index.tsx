@@ -1,9 +1,9 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
-import styles from './index.css';
 import { ConnectState } from '@/models/connect';
 import { Layout, Menu, Icon } from 'antd';
+import styles from './index.less';
 
 const { Header, Sider, Content } = Layout;
 

@@ -19,7 +19,7 @@ export function _onCreate() {
   (runtimeDva.plugins || []).forEach(plugin => {
     app.use(plugin);
   });
-  
+  app.use(require('E:/github/Z_Playground/umi_ts_antd_example/node_modules/dva-immer/dist/index.js')());
   app.model({ namespace: 'global', ...(require('E:/github/Z_Playground/umi_ts_antd_example/src/models/global.ts').default) });
   return app;
 }

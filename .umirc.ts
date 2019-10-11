@@ -1,3 +1,4 @@
+import { resolve } from 'path';
 import { IConfig } from 'umi-types';
 
 // ref: https://umijs.org/config/
@@ -8,14 +9,18 @@ const config: IConfig = {
     [
       'umi-plugin-react',
       {
+        dva: { immer: true },
         antd: true,
-        dva: true,
         dynamicImport: { webpackChunkName: true },
         title: 'umi_ts_antd_example',
         dll: {
           include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch', 'antd/es'],
         },
-        pwa: true,
+        pwa: {
+          manifestOptions: {
+            srcPath: 'manifest.json',
+          },
+        },
         locale: {
           enable: true,
           default: 'en-US',
@@ -32,6 +37,13 @@ const config: IConfig = {
       },
     ],
   ],
+
+  alias: {
+    components: resolve(__dirname, './src/components'),
+    models: resolve(__dirname, './src/models'),
+    pages: resolve(__dirname, './src/pages'),
+    utils: resolve(__dirname, './src/utils'),
+  },
 };
 
 export default config;

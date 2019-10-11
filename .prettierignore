@@ -2,6 +2,7 @@
 **/*.svg
 **/*.ejs
 **/*.html
+.DS_Store
 package.json
 .umi
 .umi-production
